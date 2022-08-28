@@ -17,6 +17,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'matze/vim-move'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 set hidden
@@ -40,6 +42,7 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 colorscheme onedark
 
+let g:move_key_modifier = 'C'
 let g:indentLine_char = '│'
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
@@ -63,6 +66,14 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fc <cmd>Telescope colorscheme<cr>
 nnoremap <leader>f/ <cmd>Telescope current_buffer_fuzzy_find<cr>
+
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
