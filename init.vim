@@ -32,6 +32,7 @@ set encoding=utf-8
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set ruler laststatus=2 showcmd showmode
 set updatetime=100
+set clipboard=unnamed
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
