@@ -8,4 +8,7 @@ require('user.lualine')
 
 map('n', '<C-q>', ':q<CR>', { silent = true })
 map('t', '<Esc>', '<C-\\><C-n>')
-
+map('n', '<Tab>', ':bnext<CR>', { silent = true })
+map('n', '<S-Tab>', ':bprevious<CR>', { silent = true })
+map('n', '<leader><C-w>', ':bd<CR>', { silent = true })
+map('n', '<leader><leader>', '<C-^>', { silent = true })

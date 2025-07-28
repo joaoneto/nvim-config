@@ -23,10 +23,10 @@ end
 --
 -- custom popup highlight
 --
-vim.highlight.create('CocCustomPopup', { guifg = '#f000ff', guibg = '#333333' })
-vim.highlight.create('CocCustomPopupBoder', { guifg = '#6d6d6d', gui = 'bold' })
-vim.highlight.create('CocMenuSel', { guifg = '#ffcfa1', guibg = '#6d6d6d' })
-vim.highlight.create('CocSearch', { guifg = '#f000ff', gui = 'bold' })
+vim.api.nvim_set_hl(0, 'CocCustomPopup', { fg = '#f000ff', bg = '#333333' })
+vim.api.nvim_set_hl(0, 'CocCustomPopupBoder', { fg = '#6d6d6d', bold = true })
+vim.api.nvim_set_hl(0, 'CocMenuSel', { fg = '#ffcfa1', bg = '#6d6d6d' })
+vim.api.nvim_set_hl(0, 'CocSearch', { fg = '#f000ff', bold = true })
 
 --
 -- key map

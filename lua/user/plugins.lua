@@ -1,7 +1,7 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-Plug("rheerun/vim-polyglot")
+Plug("sheerun/vim-polyglot")
 Plug("nvim-lualine/lualine.nvim")
 Plug("kyazdani42/nvim-web-devicons")
 Plug("navarasu/onedark.nvim")
