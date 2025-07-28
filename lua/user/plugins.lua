@@ -3,7 +3,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug("sheerun/vim-polyglot")
 Plug("nvim-lualine/lualine.nvim")
-Plug("kyazdani42/nvim-web-devicons")
+Plug("nvim-tree/nvim-web-devicons")
 Plug("navarasu/onedark.nvim")
 Plug("alvan/vim-closetag")
 Plug("Yggdroot/indentLine")

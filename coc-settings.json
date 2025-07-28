@@ -1,7 +1,9 @@
 {
   "eslint.autoFixOnSave": true,
-  "eslint.format.enable": true,
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "explorer.icon.enableNerdfont": true
+  "coc.preferences.formatOnType": true,
+  "explorer.icon.enableNerdfont": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
 
