@@ -5,20 +5,21 @@ vim.g.coc_global_extensions = {
 	'coc-tsserver',
 	'coc-explorer',
 	'coc-json',
+	'coc-eslint',
+	'coc-prettier',
 }
 
-function hasNodeModule(module)
-	return vim.fn.isdirectory('./node_modules/' .. module or '') == 1
-end
+-- function hasNodeModule(module)
+--   return vim.fn.isdirectory('./node_modules/' .. module or '') == 1
+-- end
 
-if hasNodeModule('prettier') then
-  table.insert(vim.g.coc_global_extensions, 'coc-prettier')
-end
+-- if hasNodeModule('prettier') then
+--   table.insert(vim.g.coc_global_extensions, 'coc-prettier')
+-- end
 
-if hasNodeModule('eslint') then
-  table.insert(vim.g.coc_global_extensions, 'coc-eslint')
-end
-
+-- if hasNodeModule('eslint') then
+--   table.insert(vim.g.coc_global_extensions, 'coc-eslint')
+-- end
 
 --
 -- custom popup highlight
